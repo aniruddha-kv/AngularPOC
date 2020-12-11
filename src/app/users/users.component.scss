@@ -1,0 +1,27 @@
+.borderTable{
+    border: 1px solid red;
+}
+
+table {
+    width: 100%;
+  }
+  
+  .flexTable{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  } 
+
+th{
+    mat-header-cell{
+        align-items: center;
+    }
+}  
+td.mat-cell, td.mat-footer-cell, th.mat-header-cell{
+    padding: 0.85rem;
+}
+
+mat-table{
+    padding: 0 !important;
+}

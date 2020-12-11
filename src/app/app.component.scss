@@ -1,0 +1,21 @@
+.flextable {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0.25rem;
+  padding: 0;
+  border: 1px solid blue;
+}
+
+.tableContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleClass {
+  justify-content: center;
+  font-family: Verdana;
+  font-style: italic;
+  color: rgb(44, 190, 44)
+}
