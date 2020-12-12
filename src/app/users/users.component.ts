@@ -34,8 +34,8 @@ export class UsersComponent implements OnInit {
       // );
       // window.open(url1, '_blank');
 
-      console.log(val.id);
-      this.router.navigate(['/user-details'], val.id);
+      console.log(val);
+      this.router.navigate(['/user-details'], { queryParams: { data: val.id } });
     }
 }
 
