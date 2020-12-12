@@ -11,9 +11,9 @@ export class HttpServiceService {
 
   constructor(private httpClient: HttpClient) { }
   // constructor() { }
-  url: string = "https://jsonplaceholder.typicode.com/users";
+  // url: string = "https://jsonplaceholder.typicode.com/users";
 
-  getUsers():Observable<any> {
-    return this.httpClient.get<Users[]>(this.url);
+  getUsers(url):Observable<any> {
+    return this.httpClient.get<Users[]>(url);
   }
 }

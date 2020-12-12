@@ -35,25 +35,25 @@
    </table>
  </div> -->
 
-<div class="container">
- <table class="table tableClass">
-   <thead>
-     <tr>
-       <th>UserId</th>
-       <th>userName</th>
-       <th>Email</th>
-       <th>PhoneNumber</th>
-       <th>Address</th>
-     </tr>
-   </thead>
-   <tbody>
-     <tr *ngFor="let item of users">
-        <td>{{item.id}}</td>
-        <td>{{item.name}}</td>
-        <td>{{item.email}}</td>
-        <td>{{item.phone}}</td>
-        <td>{{item.address.city}}</td>
-     </tr>
-   </tbody>
- </table>
-</div>
+ <div class="container">
+   <table class="table tableClass">
+     <thead class="titleHead">
+       <tr>
+         <th>ID</th>
+         <th>Name</th>
+         <th>Email</th>
+         <th>PhoneNumber</th>
+         <th>Address/City</th>
+       </tr>
+     </thead>
+     <tbody class="titleHover" >
+       <tr *ngFor="let item of users;let i of index" (click)="openChild(i)" [routerLink]="['/user-details']">
+           <td>{{item.id}}</td>
+           <td>{{item.name}}</td>
+           <td>{{item.email}}</td>
+           <td>{{item.phone}}</td>
+           <td>{{item.address.city}}</td>
+       </tr>
+     </tbody>
+   </table>
+ </div>
