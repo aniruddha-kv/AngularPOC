@@ -47,7 +47,7 @@
        </tr>
      </thead>
      <tbody class="titleHover" >
-       <tr *ngFor="let item of users;let i of index" (click)="openChild(i)" [routerLink]="['/user-details']">
+       <tr *ngFor="let item of users;let i of index" (click)="openChild(item)">
            <td>{{item.id}}</td>
            <td>{{item.name}}</td>
            <td>{{item.email}}</td>
@@ -57,3 +57,4 @@
      </tbody>
    </table>
  </div>
+

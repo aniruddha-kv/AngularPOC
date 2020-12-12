@@ -28,8 +28,14 @@ export class UsersComponent implements OnInit {
     }
   )}
     openChild(val){
+
+      // const url1 = this.router.serializeUrl(
+      //   this.router.createUrlTree([`/user-details`], val.id)
+      // );
+      // window.open(url1, '_blank');
+
       console.log(val.id);
-      this.router.navigateByUrl('/user-details');
+      this.router.navigate(['/user-details'], val.id);
     }
 }
 
