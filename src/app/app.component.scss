@@ -1,21 +1,15 @@
-.flextable {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 0.25rem;
-  padding: 0;
-  border: 1px solid blue;
-}
-
-.tableContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .titleClass {
+  display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
+  align-items: flex-end;
+  align-content: center;
+}
+
+.titleName{
   font-family: Verdana;
   font-style: italic;
-  color: rgb(44, 190, 44)
+  color: rgb(44, 190, 44);
+  border: 1px solid blue;
+  align-items: center;
 }

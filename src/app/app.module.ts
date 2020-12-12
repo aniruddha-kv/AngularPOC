@@ -8,19 +8,22 @@ import { UserDetailsComponent } from './users/user-details/user-details.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatTableModule} from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
 
+// import {HttpServiceService } from './services/http-service.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

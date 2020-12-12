@@ -1,27 +1,9 @@
-.borderTable{
+.tableClass{
+    // width: 90%;
     border: 1px solid red;
+    margin: 1rem;
 }
 
-table {
-    width: 100%;
-  }
-  
-  .flexTable{
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-  } 
-
-th{
-    mat-header-cell{
-        align-items: center;
-    }
-}  
-td.mat-cell, td.mat-footer-cell, th.mat-header-cell{
-    padding: 0.85rem;
-}
-
-mat-table{
-    padding: 0 !important;
+.container{
+    margin: 1rem !important;
 }
