@@ -16,4 +16,8 @@ export class HttpServiceService {
   getUsers(url):Observable<any> {
     return this.httpClient.get<Users[]>(url);
   }
+
+  delete(url): Observable<any>{
+    return this.httpClient.delete<any>(url);
+  }
 }

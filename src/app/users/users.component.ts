@@ -17,7 +17,7 @@ export class UsersComponent implements OnInit {
 
   // dataSource = ELEMENT_DATA;
   // displayedColumns: string[] = ['userId', 'userName', 'email','phoneNumber', 'address'];
-  url: string = "https://jsonplaceholder.typicode.com/users";
+  url: string = "https://jsonplaceholder.typicode.com/users/";
   
   ngOnInit(){
   this.httpService.getUsers(this.url).subscribe(
