@@ -36,22 +36,32 @@ export class UserDetailsComponent implements OnInit {
 
   deletePost(item){
     let deleteUrl =this.mainUrl+'posts/'+item.id;
+    console.log("delete Item",item);
     console.log("deleteURL ",deleteUrl);
     this.httpService.delete(deleteUrl)
     .subscribe({
         next: (data) => {
-            console.log(data);
+            // console.log(data);
             this.status = 'Delete successful';
-            console.log(this.status);
+            // console.log(this.status);
               let index = item.id;
+              console.log("posts Length:", this.posts.length);
+              console.log("index-1 mod 10 = ",(index-1)%10);
               if(this.posts.length == (index-1)%10)
               {
+
                 console.log("inside if loop")
+                console.log("index",index);
+                console.log("Deleted Title ",this.posts[this.posts.length-1].title);
+                console.log("---------------------------------------")
                 this.posts.splice(-1,1);
               }
               else{ 
-                this.posts.splice((index-1)%10, 1); 
                 console.log("Else loop");
+                console.log("index",index);
+                console.log("Deleted Title ",this.posts[index%10 -1].title);
+                console.log("---------------------------------------")
+                this.posts.splice((index-1)%10, 1); 
               }
               console.log(this.posts);
             
