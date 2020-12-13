@@ -9,7 +9,12 @@
 .titleName{
   font-family: Verdana;
   font-style: italic;
-  color: rgb(44, 190, 44);
-  border: 1px solid blue;
+  color: magenta;
+  border: 1px solid grey;
   align-items: center;
+  padding: 1rem;
+  background-color: whitesmoke;
+  box-shadow: 1px 1px 1px 1px #888888;
+  border-radius: 6px;
+  margin: 0.5rem;
 }

@@ -1,24 +1,24 @@
 <div class="container">
   <div class="row rowCont">
-
-    <div class="col-sm-4" *ngFor="let post of posts;let item of index;">
+    <div class="col-sm-12 rowCont"> <h6>Posts for specific user with userId = {{userId}}</h6>
+    </div>
+      <hr>
+    <div class="col-sm-12 d-flex align-items-stretch" *ngFor="let post of posts;let item of index;">
       <div class="card cardColor">
         <div class="card-header cardHeaderFlex ">
           <div class="cardTitle">
-            <h5 class="card-title">{{post.title}}</h5>
+            <h6 class="card-title">{{post.title}}</h6>
           </div>
           <div class="deleteIcon">
             <a class="btn btn-danger" (click)="deletePost(item)">
               <i class="fa fa-trash-o fa-lg"></i>
             </a>
           </div>
-
-
         </div>
+
         <div class="card-body">
           <p>Id :{{post.id}}</p>
           <p>UserID: {{post.userId}}</p>
-
           <p class="card-text text">{{post.body}}</p>
         </div>
       </div>

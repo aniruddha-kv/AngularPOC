@@ -10,6 +10,10 @@
   border: 1px solid grey;
   box-shadow: 1px 1px 0px 1px #faf9f9;
   margin: 0.75rem;
+  height: 80%;
+  width: 100%;
+  border-radius: 10px 10px;
+  font-size: 0.8rem;
 }
 
 .text {
@@ -24,7 +28,6 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0.25rem;
 }
 
 .cardHeaderFlex{
@@ -37,7 +40,7 @@
 .cardTitle{
     margin:0.5rem;
     flex: 1 0;
-    background: gold;
+    
 }
 .deleteIcon{
     height: 100%;
@@ -47,4 +50,5 @@
     border:1px solid black;
     justify-content: flex-end;
     align-items: flex-end;
+    border-radius: 5px;
 }
