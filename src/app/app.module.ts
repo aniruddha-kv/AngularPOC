@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatTableModule} from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
+import { OpenNewTabDirective } from './directives/openNewTab.directive';
 
 // import {HttpServiceService } from './services/http-service.service';
 
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     UsersComponent,
     UserDetailsComponent,
+    OpenNewTabDirective
   ],
   imports: [
     BrowserModule,
