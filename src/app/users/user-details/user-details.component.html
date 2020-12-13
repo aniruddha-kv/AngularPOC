@@ -1,13 +1,31 @@
 <div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="card" >
-        <div class="card-body" *ngFor="let post of posts">
-           <p>{{post.id}}</p> 
-           <p>{{post.userId}}</p> 
-          <h5 class="card-title">{{post.title}}</h5>
-          <p class="card-text">{{post.body}}</p>
+  <div class="row rowCont">
+
+    <div class="col-sm-4" *ngFor="let post of posts">
+      <div class="card cardColor">
+        <div class="card-header cardHeaderFlex ">
+          <div class="cardTitle">
+            <h5 class="card-title">{{post.title}}</h5>
+          </div>
+          <div class="deleteIcon">
+            <a class="btn btn-danger">
+              <i class="fa fa-trash-o fa-lg"></i>
+            </a>
+          </div>
+
+
+        </div>
+        <div class="card-body">
+          <p>Id :{{post.id}}</p>
+          <p>UserID: {{post.userId}}</p>
+
+          <p class="card-text text">{{post.body}}</p>
         </div>
       </div>
+      <div>
+
+      </div>
+
+
     </div>
   </div>

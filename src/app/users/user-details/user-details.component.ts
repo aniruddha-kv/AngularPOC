@@ -29,8 +29,6 @@ export class UserDetailsComponent implements OnInit {
         this.posts = response;
       }
     )
-    console.log(this.posts);
   }
-
 }
 
