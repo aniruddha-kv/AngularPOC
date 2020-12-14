@@ -51,14 +51,14 @@ export class UserDetailsComponent implements OnInit {
     this.httpService.delete(deleteUrl)
       .subscribe({
         next: (data) => {
-     
+          console.log("delete data", data);
           this.status = 'Delete successful';
           
           const i = this.posts.findIndex(e => e.id == item.id);
           console.log("i", i);
           if(i != -1)
           this.posts.splice(i,1);
-          console.log("---------------------------------------")
+          console.log("----------------");
 
           // let index = item.id;
           // console.log("posts Length:", this.posts.length);
@@ -79,7 +79,7 @@ export class UserDetailsComponent implements OnInit {
           //   this.posts.splice((index - 1) % 10, 1);
           // }
 
-          console.log("---------------------------------------")
+          console.log("----------------");
           console.log(this.posts);
 
         },
