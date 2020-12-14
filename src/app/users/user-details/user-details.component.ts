@@ -47,7 +47,7 @@ export class UserDetailsComponent implements OnInit {
   deletePost(item) {
     let deleteUrl = this.mainUrl + 'posts/' + item.id;
     console.log("delete Item", item);
-    console.log("deleteURL ", deleteUrl);
+    // console.log("deleteURL ", deleteUrl);
     this.httpService.delete(deleteUrl)
       .subscribe({
         next: (data) => {
