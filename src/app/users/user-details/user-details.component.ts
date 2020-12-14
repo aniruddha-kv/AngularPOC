@@ -51,27 +51,35 @@ export class UserDetailsComponent implements OnInit {
     this.httpService.delete(deleteUrl)
       .subscribe({
         next: (data) => {
-          // console.log(data);
+     
           this.status = 'Delete successful';
-          // console.log(this.status);
-          let index = item.id;
-          console.log("posts Length:", this.posts.length);
-          console.log("index-1 mod 10 = ", (index - 1) % 10);
-          if (this.posts.length == (index - 1) % 10) {
+          
+          const i = this.posts.findIndex(e => e.id == item.id);
+          console.log("i", i);
+          if(i != -1)
+          this.posts.splice(i,1);
+          console.log("---------------------------------------")
 
-            console.log("inside if loop")
-            console.log("index", index);
-            // console.log("Deleted Title ",this.posts[this.posts.length-1].title);
-            console.log("---------------------------------------")
-            this.posts.splice(-1, 1);
-          }
-          else {
-            console.log("Else loop");
-            console.log("index", index);
-            console.log("Deleted Title ", this.posts[index % 10 - 1].title);
-            console.log("---------------------------------------")
-            this.posts.splice((index - 1) % 10, 1);
-          }
+          // let index = item.id;
+          // console.log("posts Length:", this.posts.length);
+          // console.log("index-1 mod 10 = ", (index - 1) % 10);
+          // if (this.posts.length == (index - 1) % 10) {
+
+          //   console.log("inside if loop")
+          //   console.log("index", index);
+          //   // console.log("Deleted Title ",this.posts[this.posts.length-1].title);
+          //   console.log("---------------------------------------")
+          //   this.posts.splice(-1, 1);
+          // }
+          // else {
+          //   console.log("Else loop");
+          //   console.log("index", index);
+          //   // console.log("Deleted Title ", this.posts[index % 10 - 1].title);
+          //   console.log("---------------------------------------")
+          //   this.posts.splice((index - 1) % 10, 1);
+          // }
+
+          console.log("---------------------------------------")
           console.log(this.posts);
 
         },
